@@ -11,7 +11,7 @@ const programmingSkillsArray = Object.values(ProgrammingSkills);
     <div class="card card-xs">
       <div class="card-body">
         <h1 class="card-title text-xl">Programming Languages</h1>
-        <div class="flex gap-2">
+        <div class="flex gap-2 flex-wrap">
             {programmingSkillsArray.map((skill) => (
               <Badge badgeText={skill} badgeStyle="outline" />
             ))}
