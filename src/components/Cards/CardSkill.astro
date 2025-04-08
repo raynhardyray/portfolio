@@ -1,0 +1,33 @@
+---
+import Badge from "@components/Badge.astro";
+import { ProgrammingSkills } from "@/types/BadgeEnums";
+import CardContainer from "@/components/Cards/CardContainer.astro";
+import CardBody from "@/components/Cards/CardBody.astro";
+import type { EnumLike } from "astro:schema";
+
+type CardSkillProps = {
+    cardSkillTitle?: string;
+    cardSkillItem?: string[];
+}
+
+const {
+    cardSkillTitle = "",
+    cardSkillItem = [],
+}: CardSkillProps = Astro.props;
+---
+
+<CardContainer
+    cardContainerSize="xs" 
+    ContainerBorder={true} 
+    cardContainerClass="bg-base-200 shadow-md rounded-lg mx-3"
+>
+    <CardBody
+        cardBodyChildrenClass="gap-2 flex-wrap"
+        cardBodyTitleClass="text-xl" 
+        cardBodyTitle=`${cardSkillTitle}`
+    >
+    {cardSkillItem.map((skillsArray) => (
+        <Badge badgeClass="shadow-md" badgeText={skillsArray}/>
+    ))}
+    </CardBody>
+</CardContainer>
