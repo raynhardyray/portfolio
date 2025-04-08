@@ -13,4 +13,5 @@ export enum ProgrammingSkills {
     Python = "Python",
     JavaScript = "JavaScript",
     TypeScript = "TypeScript",
+    PHP = "PHP",
 }

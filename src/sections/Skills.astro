@@ -1,19 +1,19 @@
 ---
-import Badge from "../components/Badge.astro";
-import { ProgrammingSkills } from "../types/BadgeEnums";
+import Badge from "@components/Badge.astro";
+import { ProgrammingSkills } from "@/types/BadgeEnums";
 
 const programmingSkillsArray = Object.values(ProgrammingSkills);
 ---
 
-<div class="flex flex-col outline-solid ">
+<div class="flex flex-col min-h-screen outline-solid">
     <h1 class="text-5xl font-bold">Skills</h1>
 
     <div class="card card-xs">
-      <div class="card-body">
+      <div class="card-body card-bordered border-1 bg-base-200 shadow-md rounded-lg mx-3">
         <h1 class="card-title text-xl">Programming Languages</h1>
         <div class="flex gap-2 flex-wrap">
             {programmingSkillsArray.map((skill) => (
-              <Badge badgeText={skill} badgeStyle="outline" />
+              <Badge badgeClass="shadow-md" badgeText={skill}/>
             ))}
         </div>
       </div>

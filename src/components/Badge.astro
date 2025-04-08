@@ -4,6 +4,7 @@ type BadgeProps = {
     badgeSize?: "xs" | "sm" | "md" | "lg" | "xl";
     badgeStyle?: "solid" | "outline" | "dash" | "soft" | "ghost";
     badgeColor?: "primary" | "secondary" | "neutral" | "accent" | "info" | "success" | "warning" | "error"
+    badgeClass?: string;
 }
 
 const {
@@ -11,9 +12,8 @@ const {
     badgeSize = "md",
     badgeStyle = "solid",
     badgeColor = "neutral",
+    badgeClass = "",
 }: BadgeProps = Astro.props
-
-const badgeClass = `badge badge-${badgeSize} badge-${badgeStyle} badge-${badgeColor}`;
 ---
 
-<div class={badgeClass}>{badgeText}</div>
+<div class={`badge badge-${badgeSize} badge-${badgeStyle} badge-${badgeColor} ${badgeClass}`}>{badgeText}</div>
