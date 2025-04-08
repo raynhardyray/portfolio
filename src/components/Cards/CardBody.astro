@@ -1,0 +1,25 @@
+---
+type CardBodyProps = {
+    cardBodyTitle?: string;
+    cardBodyDescription?: string;
+    cardBodyClass?: string;
+    cardBodyTitleClass?: string;
+    cardBodyChildrenClass?: string;
+};
+
+const {
+    cardBodyTitle = "",
+    cardBodyDescription = "",
+    cardBodyClass = "",
+    cardBodyTitleClass = "",
+    cardBodyChildrenClass = "",
+}: CardBodyProps = Astro.props;
+---
+
+<div class=`card-body ${cardBodyClass}`>
+    <div class=`card-title ${cardBodyTitleClass}`>{cardBodyTitle}</div>
+    <div class="card-description">{cardBodyDescription}</div>
+    <div class=`flex ${cardBodyChildrenClass}`>
+        <slot />
+    </div>
+</div>
