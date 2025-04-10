@@ -13,6 +13,7 @@
     "@fontsource/press-start-2p": "^5.2.5",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.5.6",
+    "astro-icon": "^1.1.5",
     "daisyui": "^5.0.12",
     "tailwindcss": "^4.1.0"
   }

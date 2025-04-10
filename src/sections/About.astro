@@ -1,6 +1,29 @@
-<div class="flex flex-col outline-solid">
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="flex flex-col space-y-2">
     <h1 class="text-xl font-bold">About</h1>
     
-    <div class="text-justify text-2xl">
+    <div class="flex flex-col">
+        <div class="flex gap-2">
+            <Icon name="location" class="w-8 h-8" />
+            <p class="text-xl">Cagayan de Oro, Philippines</p>
+        </div>
+
+        <div class="flex gap-2">
+            <Icon name="email" class="w-8 h-8" />
+            <p class="text-xl">raynhardanthonyyray2001@gmail.com</p>
+        </div>
+
+        <div class="flex gap-2">
+            <Icon name="github" class="w-8 h-8" />
+            <p class="text-xl underline underline-offset-5">GitHub</p>
+        </div>
+
+        <div class="flex gap-2">
+            <Icon name="linkedin" class="w-8 h-8" />
+            <p class="text-xl underline underline-offset-5">LinkedIn</p>
+        </div>
     </div>
 </div>
