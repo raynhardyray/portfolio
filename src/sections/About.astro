@@ -18,12 +18,23 @@ import { Icon } from 'astro-icon/components';
 
         <div class="flex gap-2">
             <Icon name="github" class="w-8 h-8" />
-            <a href="https://github.com/Rayn-hard" target="_blank" class="text-xl underline underline-offset-5">GitHub</a>
+            <a href="https://github.com/Rayn-hard" target="_blank" rel="noopener noreferrer" class="text-xl underline underline-offset-5">GitHub</a>
         </div>
 
         <div class="flex gap-2">
             <Icon name="linkedin" class="w-8 h-8" />
-            <a class="text-xl underline underline-offset-5">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/raynhard-anthony-yray-44658b27a/" target="_blank" rel="noopener noreferrer" class="text-xl underline underline-offset-5">LinkedIn</a>
         </div>
+        
+        <div>
+          <label class="swap swap-rotate">
+            <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" class="theme-controller" value="light" />
+
+          <Icon name="lightmode" class="swap-off w-8 h-8" />
+          <Icon name="darkmode" class="swap-on w-8 h-8" />
+          </label>
+        </div>
+
     </div>
 </div>
