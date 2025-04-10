@@ -14,10 +14,10 @@ const {
 }: CardContainerProps = Astro.props;
 ---
 
-<div class=`card card-${cardContainerSize}
-    ${cardContainerBorder ? "card-border" : ""} 
-    ${cardContainerDash ? "card-dash" : ""} 
+<div class={`card card-${cardContainerSize}
+    ${cardContainerBorder ? " card-border" : " "} 
+    ${cardContainerDash ? " card-dash" : " "} 
     ${cardContainerClass}
-`>
+`}>
     <slot />
 </div>

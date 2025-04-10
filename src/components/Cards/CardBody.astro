@@ -16,10 +16,10 @@ const {
 }: CardBodyProps = Astro.props;
 ---
 
-<div class=`card-body ${cardBodyClass}`>
-    <div class=`card-title ${cardBodyTitleClass}`>{cardBodyTitle}</div>
+<div class={`card-body ${cardBodyClass}`}>
+    <div class={`card-title ${cardBodyTitleClass}`}>{cardBodyTitle}</div>
     <div class="card-description">{cardBodyDescription}</div>
-    <div class=`flex ${cardBodyChildrenClass}`>
+    <div class={`flex ${cardBodyChildrenClass}`}>
         <slot />
     </div>
 </div>

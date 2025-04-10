@@ -16,13 +16,13 @@ const {
 
 <CardContainer
     cardContainerSize="xs" 
-    ContainerBorder={true} 
+    cardContainerBorder={true} 
     cardContainerClass="bg-base-200 shadow-md rounded-lg mx-3"
 >
     <CardBody
-        cardBodyChildrenClass="gap-2 flex-wrap"
-        cardBodyTitleClass="text-xl" 
-        cardBodyTitle=`${cardSkillTitle}`
+        cardBodyChildrenClass={"gap-2 flex-wrap"}
+        cardBodyTitleClass={"text-xl"}
+        cardBodyTitle={`${cardSkillTitle}`}
     >
     {cardSkillItem.map((skillsArray) => (
         <Badge badgeClass="shadow-md" badgeText={skillsArray}/>
