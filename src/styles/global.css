@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@theme {
-    --font-sans: 'Source Sans Pro', sans-serif;
+html, body {
+    font-family: "IBM Plex Mono", monospace;
+
+}
+
+h1 {
+    font-family: "Press Start 2P", monospace;
 }

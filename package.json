@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/source-sans-pro": "^5.2.5",
+    "@fontsource/ibm-plex-mono": "^5.2.5",
+    "@fontsource/press-start-2p": "^5.2.5",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.5.6",
     "daisyui": "^5.0.12",
