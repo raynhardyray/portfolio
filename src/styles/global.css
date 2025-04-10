@@ -7,4 +7,5 @@ html, body {
 
 h1 {
     font-family: "Press Start 2P", monospace;
+    text-decoration: underline;
 }
