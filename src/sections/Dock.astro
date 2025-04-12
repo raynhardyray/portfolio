@@ -4,14 +4,15 @@ import { Icon } from "astro-icon/components";
 
 <div class="dock fixed bottom-3 left-1/2 -translate-x-1/2 
             bg-base-200 border-1 border-gray-300
-            rounded-full shadow-lg z-50 w-50 h-12
-">
+            rounded-full shadow-lg z-50 w-50 h-12">
     <a href="#hero" class="dock-item transition-all hover:scale-125" aria-label="Go to Home section">
         <Icon name="about" class="w-6 h-6" />
     </a>
+
     <a href="#experience" class="dock-item transition-all hover:scale-125" aria-label="Go to Experience section">
         <Icon name="experience" class="w-6 h-6" />
     </a>
+
     <a href="#projects" class="dock-item transition-all hover:scale-125" aria-label="Go to Projects section">
         <Icon name="project" class="w-6 h-6" />
     </a>
@@ -19,7 +20,7 @@ import { Icon } from "astro-icon/components";
     <label class="swap swap-rotate" aria-label="Toggle dark mode">
         <input type="checkbox" class="theme-controller" value="dark" />
 
-        <Icon name="lightmode" class="swap-off w-6 h-6 fill-current" />
-        <Icon name="darkmode" class="swap-on w-6 h-6 fill-current" />
+        <Icon name="lightmode" class="swap-on w-6 h-6 fill-current" />
+        <Icon name="darkmode" class="swap-off w-6 h-6 fill-current" />
     </label>
 </div>
