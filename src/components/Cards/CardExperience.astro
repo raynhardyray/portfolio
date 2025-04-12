@@ -1,0 +1,36 @@
+---
+import CardContainer from "./CardContainer.astro";
+import CardBody from "./CardBody.astro";
+import {workExperience} from "@/types/workExperience.ts";
+---
+{workExperience.map((job) => (
+    <CardContainer
+        cardContainerSize="xs" 
+        cardContainerBorder={true}
+        cardContainerClass="bg-base-200 shadow-md rounded-lg mx-3"
+    >
+        <div class="collapse collapse-arrow">
+            <input type="checkbox" />
+            
+            <div class="collapse-title">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-l font-bold">{job.company}</h2>
+                        <p class="text-base text-gray-500">{job.position}</p>
+                    </div>
+                    <span >{job.dateRange}</span>
+                </div>
+            </div>
+
+            <div class="collapse-content">
+                <CardBody>
+                    <ul class="list-disc list-inside text-md text-justify space-y-2">
+                    {job.description.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                    </ul>
+                </CardBody>
+            </div>
+        </div>
+    </CardContainer>
+))}
