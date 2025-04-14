@@ -46,6 +46,9 @@ jobs:
         with:
           name: artifact
 
+      - name: Create .nojekyll file
+        run: touch .nojekyll
+
       - name: Deploy to Deployment Repo
         run: |
           git config --global init.defaultBranch main
