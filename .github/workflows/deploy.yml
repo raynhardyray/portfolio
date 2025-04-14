@@ -48,7 +48,7 @@ jobs:
 
       - name: Add nojekyll
         run: |
-          echo "" > ./dist/.nojekyll
+          touch ./dist/.nojekyll
 
       - name: Deploy to Deployment Repo
         run: |
