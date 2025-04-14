@@ -12,6 +12,5 @@ export default defineConfig({
   },
 
   integrations: [icon()],
-  site: 'https://raynhardportfolio.github.io',
-  // base: 'raynhard-portfolio',
+  site: 'https://raynhardyray.github.io',
 });
