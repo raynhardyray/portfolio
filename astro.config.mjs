@@ -13,5 +13,9 @@ export default defineConfig({
 
   integrations: [icon()],
   site: 'https://raynhardyray.github.io',
-  base: '/portfolio'
+  outDir: '../raynhardyray.github.io',
+  base: '/',
+  build: {
+    assetsPrefix: './'
+  }
 });
