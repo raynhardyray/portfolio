@@ -1,34 +1,45 @@
 ---
-import { Icon } from 'astro-icon/components';
+import AboutList from '@/components/AboutList.astro';
 ---
 <div class="flex flex-col space-y-2">
     <h1 class="text-xl font-bold">About</h1>
     
     <div class="flex flex-col">
-        <div class="flex gap-2">
-            <Icon name="location" class="w-8 h-8 shrink-0" />
-            <p class="text-xl">Cagayan de Oro, Philippines</p>
-        </div>
+        <AboutList
+            iconName="location"
+            label="Cagayan de Oro, Philippines"
+            isLink={false}
+        />
 
-        <div class="flex gap-2">
-            <Icon name="email" class="w-8 h-8 shrink-0" />
-            <a href="mailto:raynhardanthonyyray2001@gmail.com" class="text-xl">raynhardanthonyyray2001@gmail.com</a>
-        </div>
+        <AboutList
+            iconName="email"
+            label="raynhardanthonyyray2001@gmail.com"
+            isLink={true}
+            href="mailto:raynhardanthonyyray2001@gmail.com"
+        /> 
 
-        <div class="flex gap-2">
-            <Icon name="github" class="w-8 h-8 shrink-0" />
-            <a href="https://github.com/Rayn-hard" target="_blank" rel="noopener noreferrer" class="text-xl underline underline-offset-5">GitHub</a>
-        </div>
+        <AboutList
+            iconName="github"
+            label="GitHub"
+            isLink={true}
+            href="https://github.com/raynhardyray"
+            target={true}
+        />
 
-        <div class="flex gap-2">
-            <Icon name="linkedin" class="w-8 h-8 shrink-0" />
-            <a href="https://www.linkedin.com/in/raynhard-anthony-yray-44658b27a/" target="_blank" rel="noopener noreferrer" class="text-xl underline underline-offset-5">LinkedIn</a>
-        </div>
+        <AboutList
+            iconName="linkedin"
+            label="LinkedIn"
+            isLink={true}
+            href="https://www.linkedin.com/in/raynhard-anthony-yray-44658b27a/"
+            target={true}
+        />
 
-        <div class="flex gap-2">
-            <Icon name="resume" class="w-8 h-8 shrink-0" />
-            <a href="https://drive.google.com/file/d/1ylANI8uz8ZpLS4uAjmyOikdne7b6xhQQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xl underline underline-offset-5">View Resume</a>
-        </div>
-
+        <AboutList
+            iconName="resume"
+            label="View Resume"
+            isLink={true}
+            href="https://drive.google.com/file/d/1ylANI8uz8ZpLS4uAjmyOikdne7b6xhQQ/view?usp=sharing"
+            target={true}
+        />
     </div>
 </div>
