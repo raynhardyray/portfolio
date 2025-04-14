@@ -13,5 +13,8 @@ export default defineConfig({
 
   integrations: [icon()],
   site: 'https://raynhardyray.github.io',
-  outDir: './dist'
+  outDir: './dist',
+  build: {
+    assetsPrefix: './'
+  }
 });
