@@ -29,7 +29,6 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          touch ./dist/.nojekyll
 
       - name: Upload production build
         uses: actions/upload-artifact@v4
@@ -50,8 +49,10 @@ jobs:
         run: |
           git config --global init.defaultBranch main
           git init
+          git checkout -b main
           git config user.name "GitHub Actions"
           git config user.email "github-actions@github.com"
+          touch .nojekyll
           git add .
           git commit -m "Deploy new build" || echo "No changes to deploy"
           git push --force "https://${{ secrets.DEPLOYMENT_REPO_TOKEN }}@github.com/raynhardyray/raynhardyray.github.io.git" main
