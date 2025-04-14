@@ -56,4 +56,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .
           git commit -m "Deploy new build" || echo "No changes to deploy"
-          git push --force "https://${{ secrets.DEPLOYMENT_REPO_TOKEN }}@github.com:raynhardyray/raynhardyray.github.io.git" main
+          git push --force "https://${{ secrets.DEPLOYMENT_REPO_TOKEN }}@github.com/raynhardyray/raynhardyray.github.io.git" main
