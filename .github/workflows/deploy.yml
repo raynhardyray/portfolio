@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download production build
-        uses: actions/download-pages-artifact@v2
+        uses: actions/download-pages-artifact@v3
 
       - name: Deploy to Deployment Repo
         run: |
