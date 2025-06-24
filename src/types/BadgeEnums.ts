@@ -24,7 +24,24 @@ export enum BackEndSkills {
 export enum Tools {
     Git = "Git",
     GitHub = "GitHub",
+    GithubActions = "Github Actions",
     Docker = "Docker",
     Postman = "Postman",
     Laragon = "Laragon",
+    VimNeovim = "Vim/Neovim",
+    VisualStudioCode = "Visual Studio Code",
+}
+
+export enum MediaEditingSkills {
+    Photoshop = "Photoshop",
+    AfterEffects = "After Effects",
+    PremierePro = "Premiere Pro",
+    DaVinciResolve = "DaVinci Resolve",
+    Filmora = "Filmora",
+    Canva = "Canva",
+}
+
+export enum OperatingSystems {
+    Windows = "Windows",
+    Linux = "Linux",
 }

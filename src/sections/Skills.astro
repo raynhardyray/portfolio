@@ -1,15 +1,21 @@
 ---
 import CardSkill from "@/components/Cards/CardSkill.astro";
-import { BackEndSkills, FrontEndSkills, ProgrammingSkills, Tools } from "@/types/BadgeEnums";
+import { BackEndSkills, FrontEndSkills, ProgrammingSkills, Tools, MediaEditingSkills, OperatingSystems } from "@/types/BadgeEnums";
 
 const programmingSkillArray = Object.values(ProgrammingSkills);
 const frontendSkillArray = Object.values(FrontEndSkills);
 const backendSkillArray = Object.values(BackEndSkills);
 const toolSkillArray = Object.values(Tools)
+const mediaSkillArray = Object.values(MediaEditingSkills);
+const operatingSystemSkillArray = Object.values(OperatingSystems);
 ---
 
 <div class="flex flex-col space-y-2">
     <h1 class="text-xl font-bold">Skills</h1>
+    <CardSkill 
+      cardSkillTitle="Operating Systems"
+      cardSkillItem={operatingSystemSkillArray}
+    />
 
     <CardSkill
       cardSkillTitle="Programming Languages"
@@ -29,5 +35,10 @@ const toolSkillArray = Object.values(Tools)
     <CardSkill 
       cardSkillTitle="Tools"
       cardSkillItem={toolSkillArray}
+    />
+
+    <CardSkill 
+      cardSkillTitle="Media Editing"
+      cardSkillItem={mediaSkillArray}
     />
 </div>
