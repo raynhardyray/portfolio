@@ -20,4 +20,17 @@ export const workExperience = [
             "utilized MySQL for managing the database and data retrieval.",
         ],
     },
+
+    {
+        company: "VjANDEP Ventures Inc.",
+        position: "IT Personnel",
+        dateRange: "November 2024 - Present",
+        description: [
+            "provides technical support and troubleshooting for hardware, software, and network issues.",
+            "maintains and updates IT infrastructure, including servers, and workstations.",
+            "installs, configures, and manages software applications and systems.",
+            "manages and maintains CCTV systems, including installation, configuration, monitoring, data-retrieval and troubleshooting.",
+            "handles layouting, photo editing, and video editing for company related events and promotions.",
+        ],
+    },
 ];

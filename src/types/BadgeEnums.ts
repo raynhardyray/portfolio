@@ -34,7 +34,6 @@ export enum Tools {
 
 export enum MediaEditingSkills {
     Photoshop = "Photoshop",
-    AfterEffects = "After Effects",
     PremierePro = "Premiere Pro",
     DaVinciResolve = "DaVinci Resolve",
     Filmora = "Filmora",
@@ -43,5 +42,5 @@ export enum MediaEditingSkills {
 
 export enum OperatingSystems {
     Windows = "Windows",
-    Linux = "Linux",
+    Linux = "Linux(Arch)",
 }
