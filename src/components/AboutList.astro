@@ -18,15 +18,15 @@ const {
 }: AboutListProps = Astro.props
 ---
 <div class="flex gap-2">
-    <Icon name={iconName} class="w-8 h-8 shrink-0" />
+    <Icon name={iconName} class="w-6 h-6 shrink-0" />
     {isLink ? (
         <a
             href={href}
             target = {target ? "_blank" : undefined}
             rel={target ? "noopener noreferrer" : undefined}
-            class="text-xl underline underline-offset-5 break-all"
+            class="text-sm underline underline-offset-5 break-all"
         >{label}</a>
     ) : (
-        <p class="text-xl">{label}</p>
+        <p class="text-sm">{label}</p>
     )}
 </div>
