@@ -22,9 +22,9 @@ import {workExperience} from "@/types/workExperience.ts";
 
             <div class="collapse-content">
                 <CardBody>
-                    <ul class="list-disc list-inside text-xs text-justify space-y-2 ml-2">
+                    <ul class="list-disc list-inside text-xs space-y-2 ml-2">
                     {job.description.map((item) => (
-                        <li>{item}</li>
+                        <li>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
                     ))}
                     </ul>
                 </CardBody>
