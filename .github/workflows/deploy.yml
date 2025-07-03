@@ -45,7 +45,7 @@ jobs:
       - name: Deploy to Deployment Repo
         uses: peaceiris/actions-gh-pages@v4
         with:
-            github_token: ${{ secrets.DEPLOYMENT_TOKEN }}
+            github_token: ${{ secrets.DEPLOYMENT_REPO_TOKEN }}
             publish_dir: ./dist
             external_repository: raynhardyray/raynhardyray.github.io
             publish_branch: main
