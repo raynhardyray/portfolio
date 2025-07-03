@@ -15,17 +15,16 @@ const {
 ---
 
 <CardContainer
-    cardContainerSize="xs" 
-    cardContainerBorder={true} 
-    cardContainerClass="bg-base-200 shadow-md rounded-lg mx-3"
+    cardContainerSize="xs"
+    cardContainerClass="px-0"
 >
     <CardBody
-        cardBodyChildrenClass={"gap-1 flex-wrap"}
-        cardBodyTitleClass={"text-xl"}
+        cardBodyChildrenClass={"flex-wrap gap-2"}
+        cardBodyTitleClass={"text-md"}
         cardBodyTitle={`${cardSkillTitle}`}
     >
     {cardSkillItem.map((skillsArray) => (
-        <Badge badgeClass="shadow-md" badgeText={skillsArray} />
+        <Badge badgeText={skillsArray} />
     ))}
     </CardBody>
 </CardContainer>

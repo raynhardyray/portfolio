@@ -1,7 +1,6 @@
 ---
 type CardBodyProps = {
     cardBodyTitle?: string;
-    cardBodyDescription?: string;
     cardBodyClass?: string;
     cardBodyTitleClass?: string;
     cardBodyChildrenClass?: string;
@@ -9,7 +8,6 @@ type CardBodyProps = {
 
 const {
     cardBodyTitle = "",
-    cardBodyDescription = "",
     cardBodyClass = "",
     cardBodyTitleClass = "",
     cardBodyChildrenClass = "",
@@ -18,7 +16,6 @@ const {
 
 <div class={`card-body ${cardBodyClass}`}>
     <p class={`card-title ${cardBodyTitleClass}`}>{cardBodyTitle}</p>
-    <div class="card-description">{cardBodyDescription}</div>
     <div class={`flex ${cardBodyChildrenClass}`}>
         <slot />
     </div>
