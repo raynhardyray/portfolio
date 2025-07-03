@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   build:
@@ -27,13 +25,12 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: |
-          npm run build
+        run: npm run build
 
       - name: Upload production build
         uses: actions/upload-artifact@v4
         with:
-          name: artifact
+          name: github-pages
           path: ./dist
 
   deploy:
@@ -43,16 +40,15 @@ jobs:
       - name: Download production build
         uses: actions/download-artifact@v4
         with:
-          name: artifact
+          name: github-pages
 
       - name: Deploy to Deployment Repo
-        run: |
-          git config --global init.defaultBranch main
-          git init
-          git checkout -b main
-          git config user.name "GitHub Actions"
-          git config user.email "github-actions@github.com"
-          touch .nojekyll
-          git add .
-          git commit -m "Deploy new build" || echo "No changes to deploy"
-          git push --force "https://${{ secrets.DEPLOYMENT_REPO_TOKEN }}@github.com/raynhardyray/raynhardyray.github.io.git" main
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+            github_token: ${{ secrets.DEPLOYMENT_TOKEN }}
+            publish_dir: ./dist
+            external_repository: raynhardyray/raynhardyray.github.io
+            publish_branch: main
+            user_name: 'github-actions[bot]'
+            user_email: 'github-actions[bot]@users.noreply.github.com'
+            keep_files: false
