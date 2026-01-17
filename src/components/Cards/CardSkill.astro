@@ -2,6 +2,8 @@
 import Badge from "@components/Badge.astro";
 import CardContainer from "@/components/Cards/CardContainer.astro";
 import CardBody from "@/components/Cards/CardBody.astro";
+import { Icon } from "astro-icon/components";
+import { SKILL_ICONS } from "@/types/SkillsMap";
 
 type CardSkillProps = {
     cardSkillTitle?: string;
@@ -19,12 +21,20 @@ const {
     cardContainerClass="px-0"
 >
     <CardBody
-        cardBodyChildrenClass={"flex-wrap gap-2"}
+        cardBodyChildrenClass={"flex-wrap gap-2 items-center"}
         cardBodyTitleClass={"text-md"}
         cardBodyTitle={`${cardSkillTitle}`}
     >
-    {cardSkillItem.map((skillsArray) => (
-        <Badge badgeText={skillsArray} />
-    ))}
+    {cardSkillItem.map((skillsArray) => {
+        const iconName = SKILL_ICONS[skillsArray];
+
+        return iconName ? (
+            <div class="tooltip" data-tip={skillsArray}>
+                <Icon name={iconName} class={"w-8 h-8"} />
+            </div>
+        ) : (
+            <Badge badgeText={skillsArray} badgeSize="sm" badgeClass="" />
+        );
+    })}
     </CardBody>
 </CardContainer>

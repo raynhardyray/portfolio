@@ -3,8 +3,6 @@ export enum FrontEndSkills {
     HTML = "HTML",
     CSS = "CSS",
     Tailwind = "Tailwind CSS",
-    DaisyUI = "DaisyUI",
-    Astro = "Astro",
 }
 
 export enum ProgrammingSkills {
@@ -16,7 +14,6 @@ export enum ProgrammingSkills {
 }
 
 export enum BackEndSkills {
-    RestAPI = "Rest API",
     MySQL = "MySQL",
     Laravel = "Laravel",
 }
@@ -24,7 +21,6 @@ export enum BackEndSkills {
 export enum Tools {
     Git = "Git",
     GitHub = "GitHub",
-    GithubActions = "Github Actions",
     Docker = "Docker",
     Postman = "Postman",
     Laragon = "Laragon",
@@ -35,8 +31,6 @@ export enum Tools {
 export enum MediaEditingSkills {
     Photoshop = "Photoshop",
     PremierePro = "Premiere Pro",
-    DaVinciResolve = "DaVinci Resolve",
-    Filmora = "Filmora",
     Canva = "Canva",
 }
 
