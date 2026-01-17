@@ -1,0 +1,52 @@
+---
+interface Props {
+  strings: string[];
+  speed?: number;
+  className?: string;
+  loop?: boolean;
+}
+
+const { 
+  strings, 
+  speed = 50, 
+  className = "", 
+  loop = true,
+} = Astro.props;
+---
+
+<span 
+  class={`typed-selector ${className}`} 
+  data-strings={JSON.stringify(strings)} 
+  data-speed={speed}
+  data-loop={loop.toString()}
+></span>
+
+<script>
+  import Typed from 'typed.js';
+
+  function setupTyped() {
+    const elements = document.querySelectorAll('.typed-selector');
+    
+    elements.forEach((el) => {
+      if (el.classList.contains('is-initialized')) return;
+
+      const strings = JSON.parse(el.getAttribute('data-strings') || '[]');
+      const speed = Number(el.getAttribute('data-speed'));
+      const loop = el.getAttribute('data-loop') === 'true';
+
+      new Typed(el, {
+        strings: strings,
+        typeSpeed: speed,
+        backSpeed: speed / 2,
+        loop: loop,
+      });
+
+      el.classList.add('is-initialized');
+    });
+  };
+
+  setupTyped();
+
+  document.addEventListener('astro:after-swap', setupTyped);
+
+</script>
