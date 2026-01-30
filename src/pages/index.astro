@@ -1,24 +1,28 @@
 ---
+import TypedText from "@/components/TypedText.astro";
 import Layout from "@/layouts/Layout.astro";
-import About from "@/sections/About.astro";
-import Hero from "@/sections/Hero.astro";
-import Skills from "@/sections/Skills.astro";
-import Projects from "@/sections/Projects.astro";
-import Dock from "@/sections/Dock.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<main class="min-h-screen flex justify-center px-4 sm:px-6 lg:px-8">
-		<div class="max-w-2xl w-full py-20 space-y-10">
-			<Hero />
-			<About />
-			<Skills />
-			<Projects />
-			
-			<Dock />
-		</div>
-	</main>
+  <div class="flex flex-col gap-3 items-start sm:items-center text-left sm:text-center justify-center py-5 px-5">
+    <h1 class="text-2xl">Raynhard Anthony Yray</h1>
+
+    <TypedText
+      strings={[
+        "Full Stack Developer",
+        "Photo Editor", 
+        "Video Editor", 
+        "Network Admin",
+        "Tech Enthusiast"
+      ]}
+      speed={50}
+      loop={true}
+      className="text-xl"
+    />
+  </div>
+
+  <nav class="flex flex-col gap-5 px-5 sm:flex-row justify-center">
+    <a href="/about/" class="text-2xl">/about</a>
+    <!-- <a href="/projects/" class="text-2xl">/projects</a> -->
+  </nav>
 </Layout>

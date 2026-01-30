@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-   themes: light --default, dark --prefersdark;
+  themes: dark --default;
 }
 
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("/fonts/ibm-plex-mono-latin-400-normal.woff") format("woff2");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono-latin-400-normal.woff") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Press Start 2P";
-    src: url("/fonts/press-start-2p-latin-400-normal.woff") format("woff2");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Press Start 2P";
+  src: url("/fonts/press-start-2p-latin-400-normal.woff") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
-html, body {
-    font-family: "IBM Plex Mono", monospace;
+html,
+body {
+  font-family: "IBM Plex Mono", monospace;
 }
 
-h1 {
-    font-family: "Press Start 2P", monospace;
-    text-decoration: underline;
+h1,
+h2 {
+  font-family: "Press Start 2P", monospace;
 }

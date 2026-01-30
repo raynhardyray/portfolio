@@ -28,4 +28,14 @@ export const SKILL_ICONS: Record<string, string> = {
     //Operating Systems
     "Windows": "windows",
     "Linux(Arch)": "arch",
+    "Location": "location",
+};
+
+export const INFO_ICONS: Record<string, string> = {
+    "Cagayan de Oro, Philippines": "location",
+    "Xavier University": "education",
+    "raynhardanthonyyray2001@gmail.com": "email",
+    "GitHub": "github",
+    "LinkedIn": "linkedin",
+    "View Resume": "resume"
 };

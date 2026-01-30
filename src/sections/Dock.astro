@@ -2,21 +2,32 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="dock fixed bottom-3 left-1/2 -translate-x-1/2 
+<div
+  class="dock fixed bottom-3 left-1/2 -translate-x-1/2
             border-1 border-gray-300
-            rounded-full shadow-lg z-50 w-30 h-10">
-    <a href="#hero" class="dock-item transition-all hover:scale-125" aria-label="Go to Home section">
-        <Icon name="about" class="w-6 h-6" />
-    </a>
+            rounded-full shadow-lg z-50 w-33 h-13 sm:hidden"
+>
+  <a
+    href="/"
+    class="dock-item transition-all hover:scale-125"
+    aria-label="Go to Home section"
+  >
+    <Icon name="about" class="w-8 h-8" />
+  </a>
 
-    <a href="#projects" class="dock-item transition-all hover:scale-125" aria-label="Go to Projects section">
-        <Icon name="project" class="w-6 h-6" />
-    </a>
+  <a
+    href="/about"
+    class="dock-item transition-all hover:scale-125"
+    aria-label="Go to About section"
+  >
+    <Icon name="aboutme" class="w-6 h-6" />
+  </a>
 
-    <label class="swap swap-rotate transition-all hover:scale-125" aria-label="Toggle dark mode">
-        <input type="checkbox" class="theme-controller" value="dark" />
-
-        <Icon name="lightmode" class="swap-on w-6 h-6 fill-current" />
-        <Icon name="darkmode" class="swap-off w-6 h-6 fill-current" />
-    </label>
+  <a
+    href="/projects"
+    class="dock-item transition-all hover:scale-125"
+    aria-label="Go to Projects section"
+  >
+    <Icon name="project" class="w-8 h-8" />
+  </a>
 </div>
