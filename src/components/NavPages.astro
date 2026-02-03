@@ -1,5 +1,7 @@
 ---
 const { isIndex = false } = Astro.props;
+const pathname = Astro.url.pathname;
+const isActive = (href: string) => pathname === href || pathname === `${href}/`;
 ---
 
 <nav class="flex flex-col gap-5 px-5 sm:flex-row justify-center">
@@ -7,11 +9,39 @@ const { isIndex = false } = Astro.props;
     isIndex ? (
       <span />
     ) : (
-      <a href="/" class="text-xl link link-hover">
+      <a
+        href="/"
+        class={`text-xl`}
+        aria-current={isActive("/") ? "page" : undefined}
+      >
         /home
       </a>
     )
   }
-  <a href="/about/" class="text-xl link link-hover">/about</a>
-  <a href="/projects/" class="text-xl link link-hover">/projects</a>
+
+  <a
+    href="/about/"
+    class={`relative pb-1 text-xl
+      after:content-['']
+      after:absolute after:left-0 after:bottom-0
+      after:h-[1px] after:bg-[#d2dee4] after:transition-all
+      ${isActive("/about") ? "after:w-full" : "after:w-0 hover:after:w-full"}
+    `}
+    aria-current={isActive("/about") ? "page" : undefined}
+  >
+    /about
+  </a>
+
+  <a
+    href="/projects/"
+    class={`relative pb-1 text-xl
+      after:content-['']
+      after:absolute after:left-0 after:bottom-0
+      after:h-[1px] after:bg-[#d2dee4] after:transition-all
+      ${isActive("/projects") ? "after:w-full" : "after:w-0 hover:after:w-full"}
+    `}
+    aria-current={isActive("/projects") ? "page" : undefined}
+  >
+    /projects
+  </a>
 </nav>
