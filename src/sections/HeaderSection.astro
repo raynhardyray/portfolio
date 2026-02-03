@@ -1,5 +1,6 @@
 ---
-import Dock from "./Dock.astro";
+import Dock from "@/sections/Dock.astro";
+import NavPages from "@/components/NavPages.astro";
 ---
 
 <header>
@@ -7,11 +8,7 @@ import Dock from "./Dock.astro";
     class="p-5 justify-between items-center max-w-4xl mx-auto hidden sm:flex"
   >
     <h2>Raynhard Anthony Yray</h2>
-    <nav class="flex gap-3 items-center">
-      <a href="/" class="text-xl">/home</a>
-      <a href="/about/" class="text-xl">/about</a>
-      <a href="/projects/" class="text-xl">/projects</a>
-    </nav>
+    <NavPages />
   </div>
 </header>
 

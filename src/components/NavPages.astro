@@ -1,0 +1,17 @@
+---
+const { isIndex = false } = Astro.props;
+---
+
+<nav class="flex flex-col gap-5 px-5 sm:flex-row justify-center">
+  {
+    isIndex ? (
+      <span />
+    ) : (
+      <a href="/" class="text-xl link link-hover">
+        /home
+      </a>
+    )
+  }
+  <a href="/about/" class="text-xl link link-hover">/about</a>
+  <a href="/projects/" class="text-xl link link-hover">/projects</a>
+</nav>
