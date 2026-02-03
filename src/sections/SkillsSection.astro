@@ -1,43 +1,39 @@
 ---
 import IconArray from "@/components/IconArray.astro";
-import { BackEndSkills, FrontEndSkills, ProgrammingSkills, Tools, MediaEditingSkills, OperatingSystems } from "@/types/Enums";
+import {
+  BackEndSkills,
+  FrontEndSkills,
+  ProgrammingSkills,
+  Tools,
+  MediaEditingSkills,
+  OperatingSystems,
+} from "@/types/Enums";
 
 const programmingSkillArray = Object.values(ProgrammingSkills);
 const frontendSkillArray = Object.values(FrontEndSkills);
 const backendSkillArray = Object.values(BackEndSkills);
-const toolSkillArray = Object.values(Tools)
+const toolSkillArray = Object.values(Tools);
 const mediaSkillArray = Object.values(MediaEditingSkills);
 const operatingSystemSkillArray = Object.values(OperatingSystems);
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <IconArray
-      iconTitle="Operating Systems"
-      iconItems={operatingSystemSkillArray}
-    />
+  <IconArray
+    iconTitle="Operating Systems"
+    iconItems={operatingSystemSkillArray}
+  />
 
-    <IconArray
-      iconTitle="Programming Languages"
-      iconItems={programmingSkillArray}
-    />
+  <IconArray
+    iconTitle="Programming Languages"
+    iconItems={programmingSkillArray}
+  />
 
-    <IconArray 
-      iconTitle="Frontend Development"
-      iconItems={frontendSkillArray}
-    />
+  <IconArray iconTitle="Frontend Development" iconItems={frontendSkillArray} />
 
-    <IconArray 
-      iconTitle="Backend Development"
-      iconItems={backendSkillArray}
-    />
+  <IconArray iconTitle="Backend Development" iconItems={backendSkillArray} />
 
-    <IconArray 
-      iconTitle="Tools"
-      iconItems={toolSkillArray}
-    />
+  <IconArray iconTitle="Tools" iconItems={toolSkillArray} />
 
-    <IconArray 
-      iconTitle="Media Editing"
-      iconItems={mediaSkillArray}
-    />
+  <IconArray iconTitle="Media Editing" iconItems={mediaSkillArray} />
 </div>
+

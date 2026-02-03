@@ -1,22 +1,32 @@
 ---
 type CardContainerProps = {
-    cardContainerSize?: "xs" | "sm" | "md" | "lg" | "xl";
-    cardContainerClass?: string;
-}
+  cardContainerSize?: "xs" | "sm" | "md" | "lg" | "xl";
+  cardContainerClass?: string;
+  cardContainerImg?: string;
+  cardContainerImgAlt?: string;
+};
 
 const {
-    cardContainerSize = "xs",
-    cardContainerClass = "",
+  cardContainerSize = "xs",
+  cardContainerClass = "",
+  cardContainerImg = "",
+  cardContainerImgAlt = "",
 }: CardContainerProps = Astro.props;
 ---
 
-<div class={`card 
+<div
+  class={`card 
     ${cardContainerSize === "xs" ? "card-xs" : ""}
     ${cardContainerSize === "sm" ? "card-sm" : ""}
     ${cardContainerSize === "md" ? "card-md" : ""}
     ${cardContainerSize === "lg" ? "card-lg" : ""}
     ${cardContainerSize === "xl" ? "card-xl" : ""}  
     ${cardContainerClass}
-`}>
-    <slot />
+`}
+>
+  <figure>
+    <img src={cardContainerImg} alt={cardContainerImgAlt} />
+  </figure>
+  <slot />
 </div>
+
