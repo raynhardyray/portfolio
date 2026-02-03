@@ -24,10 +24,29 @@ var projectsCount = projects.length;
             cardContainerClass="border-2 border-transparent hover:border-[#d2dee4]"
           >
             <CardBody cardBodyTitle={project.title}>
-              <div>
-                <p>{project.description}</p>
+              <div class="">
+                <p class="text-justify">{project.description}</p>
 
-                <div class="card-actions justify-end">
+                <div class="card-actions justify-between items-center mt-3">
+                  <div>
+                    <a
+                      href={project.link}
+                      class="font-bold text-lg hover:underline underline-offset-8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      /link
+                    </a>
+
+                    <a
+                      href={project.github}
+                      class="font-bold text-lg hover:underline underline-offset-8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      /github
+                    </a>
+                  </div>
                   <IconArray iconItems={project.tags} />
                 </div>
               </div>
