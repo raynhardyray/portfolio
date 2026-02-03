@@ -3,6 +3,7 @@ import CardBody from "@/components/Cards/CardBody.astro";
 import CardContainer from "@/components/Cards/CardContainer.astro";
 import Layout from "@/layouts/Layout.astro";
 import projects from "@/types/projectsData.json";
+import IconArray from "@/components/IconArray.astro";
 
 var projectsCount = projects.length;
 ---
@@ -20,11 +21,16 @@ var projectsCount = projects.length;
           <CardContainer
             cardContainerSize="md"
             cardContainerImg={project.image}
-            cardContainerClass="border border-transparent hover:border-[#d2dee4] "
+            cardContainerClass="border-2 border-transparent hover:border-[#d2dee4]"
           >
             <CardBody cardBodyTitle={project.title}>
-              {project.description}
-              <div />
+              <div>
+                <p>{project.description}</p>
+
+                <div class="card-actions justify-end">
+                  <IconArray iconItems={project.tags} />
+                </div>
+              </div>
             </CardBody>
           </CardContainer>
         ))

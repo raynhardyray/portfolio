@@ -3,23 +3,7 @@
     "title": "Portfolio Website",
     "description": "My personal portfolio website built using Astro framework.",
     "image": "/images/projects/portfolio.png",
-    "tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "Astro"],
-    "link": "http://raynhardyray.github.io",
-    "github": "https://github.com/raynhardyray/portfolio"
-  },
-  {
-    "title": "VjANDEP Consignment",
-    "description": "",
-    "image": "",
-    "tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "Astro"],
-    "link": "",
-    "github": "https://github.com/raynhardyray/vjandep-consignment"
-  },
-  {
-    "title": "Portfolio Website",
-    "description": "My personal portfolio website built using Astro framework.",
-    "image": "/images/projects/portfolio.png",
-    "tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "Astro"],
+    "tags": ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
     "link": "http://raynhardyray.github.io",
     "github": "https://github.com/raynhardyray/portfolio"
   }
