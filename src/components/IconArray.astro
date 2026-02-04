@@ -1,0 +1,31 @@
+---
+import { SKILL_ICONS, INFO_ICONS } from "@/types/Maps";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  iconTitle?: string;
+  iconItems?: string[];
+  info?: boolean;
+}
+
+const { iconTitle = "", iconItems = [], info = false } = Astro.props;
+---
+
+<span class="card-title">
+  {iconTitle}
+</span>
+
+<div class="space-x-2">
+  {
+    iconItems.map((iconsArray) => {
+      const icon = info ? INFO_ICONS[iconsArray] : SKILL_ICONS[iconsArray];
+
+      return (
+        <div class="tooltip" data-tip={iconsArray}>
+          <Icon name={icon} class={"w-8 h-8"} />
+        </div>
+      );
+    })
+  }
+</div>
+

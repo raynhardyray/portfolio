@@ -13,13 +13,14 @@ const {
   loop = true,
 } = Astro.props;
 ---
-
-<span 
-  class={`typed-selector ${className}`} 
-  data-strings={JSON.stringify(strings)} 
-  data-speed={speed}
-  data-loop={loop.toString()}
-></span>
+<div>
+  <span 
+    class={`typed-selector ${className}`} 
+    data-strings={JSON.stringify(strings)} 
+    data-speed={speed}
+    data-loop={loop.toString()}
+  ></span>
+</div>
 
 <script>
   import Typed from 'typed.js';

@@ -38,3 +38,12 @@ export enum OperatingSystems {
     Windows = "Windows",
     Linux = "Linux(Arch)",
 }
+
+export enum InformationEnums {
+    CDO = "Cagayan de Oro, Philippines",
+    Education = "Xavier University",
+    Email = "raynhardanthonyyray2001@gmail.com",
+    GitHub = "GitHub",
+    LinkedIn = "LinkedIn",
+    Resume = "View Resume"
+}

@@ -17,5 +17,9 @@
     "daisyui": "^5.0.12",
     "tailwindcss": "^4.1.0",
     "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import InfoSection from "@/sections/InfoSection.astro";
+import SkillsSection from "@/sections/SkillsSection.astro";
+---
+
+<Layout title="About | Raynhard Anthony Yray">
+  <div class="flex flex-col gap-3 space-y-3">
+    <div class="space-y-2">
+      <h1 class="text-2xl">About</h1>
+      <p>
+        a tech enthusiast with a passion for building and optimizing systems,
+        exploring networks, and experimenting with emerging technologies.
+      </p>
+
+      <InfoSection />
+    </div>
+
+    <div>
+      <h1 class="text-2xl">Skills</h1>
+      <SkillsSection />
+    </div>
+  </div>
+</Layout>

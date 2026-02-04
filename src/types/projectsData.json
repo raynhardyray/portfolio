@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "My personal portfolio website built using Astro framework.",
+    "image": "/images/projects/portfolio.png",
+    "tags": ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
+    "link": "http://raynhardyray.github.io",
+    "github": "https://github.com/raynhardyray/portfolio"
+  }
+]
