@@ -5,7 +5,8 @@
     "image": "/images/projects/portfolio.png",
     "tags": ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
     "link": "http://raynhardyray.github.io",
-    "github": "https://github.com/raynhardyray/portfolio"
+    "github": "https://github.com/raynhardyray/portfolio",
+    "created": "2025-04-05"
   },
   {
     "title": "QR-Barcode-Scanner",
@@ -13,6 +14,7 @@
     "image": "/images/projects/qr-barcode-scanner.png",
     "tags": ["Python"],
     "link": "https://github.com/raynhardyray/qr-barcode-scanner",
-    "github": "https://github.com/raynhardyray/qr-barcode-scanner"
+    "github": "https://github.com/raynhardyray/qr-barcode-scanner",
+    "created": "2025-09-19"
   }
 ]
