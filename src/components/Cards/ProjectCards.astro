@@ -1,0 +1,58 @@
+---
+import IconArray from "@/components/IconArray.astro";
+import CardBody from "./CardBody.astro";
+import CardContainer from "./CardContainer.astro";
+
+interface Props {
+    projectImage: string;
+    projectTitle: string;
+    projectDescription: string;
+    projectLink: string;
+    projectGithub: string;
+    projectTags: string[];
+};
+
+const {
+    projectImage,
+    projectTitle,
+    projectDescription,
+    projectLink,
+    projectGithub,
+    projectTags,
+} = Astro.props;
+---
+
+<CardContainer
+    cardContainerSize="md"
+    cardContainerImg={projectImage}
+    cardContainerClass="border-2 border-transparent hover:border-[#d2dee4]"
+    >
+    <CardBody cardBodyTitle={projectTitle}>
+        <div class="">
+            <p class="text-justify">{projectDescription}</p>
+
+            <div class="card-actions justify-between items-center mt-3">
+                <div>
+                    <a
+                        href={projectLink}
+                        class="font-bold text-lg hover:underline underline-offset-8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        /link
+                    </a>
+
+                    <a
+                        href={projectGithub}
+                        class="font-bold text-lg hover:underline underline-offset-8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        /github
+                    </a>
+                </div>
+                <IconArray iconItems={projectTags} />
+            </div>
+        </div>
+    </CardBody>
+</CardContainer>
