@@ -10,7 +10,7 @@
   {
     "title": "QR-Barcode-Scanner",
     "description": "A python application used for scanning QR & barcodes.",
-    "image": "/images/projects/portfolio.png",
+    "image": "/images/projects/qr-barcode-scanner.png",
     "tags": ["Python"],
     "link": "https://github.com/raynhardyray/qr-barcode-scanner",
     "github": "https://github.com/raynhardyray/qr-barcode-scanner"
